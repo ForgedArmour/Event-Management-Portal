@@ -1,5 +1,5 @@
 touch .gitignore
-git config --global user.name ForgedArmour
+git config --global user.name Name
 git config --global user.email youremail@example.com
 git init
 git add .
