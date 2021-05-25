@@ -1,0 +1,56 @@
+{% extends 'base.html' %}
+{% block head %}
+
+<link href="/static/starter-template.css" rel="stylesheet">
+<link rel="stylesheet" href="/static/eventcreate.css">
+
+
+{% endblock head %}
+
+{% block title %}Home | {% endblock title %}
+{% block body %}
+
+
+<div class="col-lg-8 mx-auto p-3 py-md-5">
+  <header class="d-flex align-items-center pb-3 mb-5 border-bottom">
+    <a href="/">
+      <img src="/static/logo.png" alt="Logo" style="width: 30%;height: 10%;">
+    </a>
+  </header>
+
+    <h1>Get started with EventHuB</h1>
+    <p class="fs-5 col-md-8">Welcome to EventHuB, your number one portal for creating and registering for an event. EventHuB helps you organize your events. Design your perfect event. Let us help you create.</p>
+
+    <div class="mb-5">
+      <a href="signup" class="btn btn-primary btn-lg px-4">Get Started</a>
+    </div>
+
+    <hr class="col-3 col-md-2 mb-5"><br>
+
+    <div class="row g-1" style="margin: 0;">
+      <div class="col-md-5" style="padding-right: 15px;">
+        <h2>Our Services</h2>
+        <p>We offer some quality services for you and your team. All in one place to manage your Events. So what are you waiting lets get started.</p>
+        <ul class="icon-list">
+          <li>Dynamic online event registration</li>
+          <li>Event Updation</li>
+          <li>Event Deletion</li>
+          <li>Event Report</li>
+        </ul>
+      </div>
+
+      <div class="col-md-6">
+        <h2>Features</h2>
+        <p>We're dedicated to providing you the best of this product, with a focus on dependability and customer service.We hope you enjoy our event portal as much as we enjoy offering them to you.</p>
+        <ul class="icon-list">
+          <li>Build the perfect event</li>
+          <li>Manage your event in one place</li>
+          <li>Increase attendance</li>
+          <li>Ensure your success</li>
+        </ul>
+      </div>
+    </div>
+</div>
+<br><br><br><br><br>
+
+{% endblock body %}

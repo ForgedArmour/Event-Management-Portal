@@ -1,0 +1,34 @@
+{% extends 'base.html' %}
+
+{% block title %} {{ event.event_name }} {% endblock title %}
+{% block body %}
+
+<div class="about-section" style="padding: 20px;
+text-align: center;
+background-color: #474e5d;
+color: white;">
+    <h1>Registered Events</h1>
+    <p>Find all your registered Events here. Make sure you attend all of them. Thanks in advance for choosing us
+  </p>
+</div>
+<div class="container" style="padding-bottom: 300px;padding-top: 80px;margin: auto;">
+    
+    <div class="row">
+        {% for y in regevent %}
+        <div class="col-sm-6">
+            <div class="card" style="width: 500px;">
+            <div class="card-body">
+                <h5 class="card-title">{{y.myeve_name}}</h5>
+                <p class="card-text">{{y.myeve_desc}}</p>
+                <p class="card-text"> Contact : {{y.myeve_contact}}</p>
+               
+            </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+
+</div>
+
+
+{% endblock body %}

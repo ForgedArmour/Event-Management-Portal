@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block title %} {{ event.event_name }} {% endblock title %}
+{% block body %}
+
+
+<div class="alert alert-success" role="alert">
+    <h4 class="alert-heading">Well done!</h4>
+    <p>Aww yeah, you successfully registered for the Event '{{ event.event_name }}'</p>
+    <hr>
+    <p class="mb-0">Find your Registered Events in 'Registered Events' page</p>
+  </div>
+
+
+{% endblock body %}

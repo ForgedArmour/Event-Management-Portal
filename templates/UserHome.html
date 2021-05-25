@@ -1,0 +1,64 @@
+{% extends 'base.html' %}
+
+
+{% block head %}
+
+<link rel="stylesheet" href="/static/userhome.css">
+
+
+
+{% endblock head %}
+
+{% block body %}
+<div class="about-section">
+  <h1>Upcoming Events</h1>
+  <p>Welcome to EventHuB, your number one portal for creating and registering for an event.<br> We're dedicated to providing you the best of this product, with a focus on dependability and customer service.<br>We hope you enjoy our event portal as much as we enjoy offering them to you.
+</p>
+
+</div>
+    <div style="margin: 20px 100px 80px;">
+          <div class="row" >
+                {% for j in event %}
+                  <div class="column">
+                    <div class="card">
+                      <img src="/media/{{ j.event_poster }}" alt="event1 poster" style="width:auto;height: 200px;">
+                      <div class="container">
+                        <h2>{{j.event_name}}</h2>
+                        <p class="title">{{j.event_date}}</p>
+                        <p>{{j.event_desc}}</p>
+                        <p>Contact : {{j.event_contact}}</p>
+                        <p><a href="eventregister/{{j.id}}"><button class="button cart" id="et{{j.id}}">Register</button></a></p>
+                      </div>
+                    </div>
+                  </div>
+                {% endfor %}
+          </div>
+    </div>
+</div>
+
+  </body>
+
+{% endblock body %}
+
+{% block js %}
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js" type="text/javascript"></script>
+
+<script language="JavaScript" type="text/javascript">
+
+console.log('its working');
+if (localStorage.getItem('cart') == null) {
+  var cart = {};
+}
+else{
+  cart = JSON.parse(localStorage.getItem('cart'));
+}
+ $('.cart').click(function () {
+  console.log('Clicked Register Button....Yai...');
+  var idstr = this.id.toString();
+  console.log(idstr);
+});
+</script>
+
+
+{% endblock js %}

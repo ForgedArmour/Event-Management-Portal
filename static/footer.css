@@ -1,0 +1,19 @@
+.foot {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    color: white;
+    background-color: #474e5d;
+    height: 70px;
+    display:inline-block;
+    padding: 5px;
+    
+  }
+  .icon{
+    width: 150pxpx;
+    height: 50px;
+    padding:10px 0 0 45vw;
+    
+
+  }
