@@ -21,5 +21,15 @@ class myEvent(models.Model):
     myeve_desc = models.CharField(max_length=300)
     myeve_contact = models.CharField(max_length=13)
 
+
     def __str__(self):
         return self.myeve_name
+
+
+
+class cordinator(models.Model):
+    cord_no = models.AutoField
+    cord_username = models.CharField(max_length=50)
+
+    def __str__(self):
+        return self.cord_username

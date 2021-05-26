@@ -16,13 +16,14 @@ color: white;">
     <div class="row">
         {% for y in regevent %}
         <div class="col-sm-6">
-            <div class="card" style="width: 500px;">
-            <div class="card-body">
-                <h5 class="card-title">{{y.myeve_name}}</h5>
-                <p class="card-text">{{y.myeve_desc}}</p>
-                <p class="card-text"> Contact : {{y.myeve_contact}}</p>
-               
-            </div>
+            <div class="card" >
+                <div class="card-body" style="width: 500px;">
+                    <h5 class="card-title">{{y.myeve_name}}</h5>
+                    <p class="card-text">{{y.myeve_desc}}</p>
+                    <p class="card-text"> Contact : {{y.myeve_contact}}</p>
+                    <a href="delevents/{{ y.id }}" class="btn btn-primary">Unregister</a>
+                </div>
+            
             </div>
         </div>
         {% endfor %}
